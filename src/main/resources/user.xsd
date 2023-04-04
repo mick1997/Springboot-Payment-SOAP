@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://snva.com/xml/user"
+           targetNamespace="http://snva.com/xml/user" elementFormDefault="qualified">
+
+    <xs:element name="userDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="firstName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="userDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="User" type="tns:User"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="User">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="contact" type="xs:string"/>
+            <xs:element name="age" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
